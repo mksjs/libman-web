@@ -1,4 +1,4 @@
-CREATE TABLE book
+/*CREATE TABLE book
 (
 	id bigint NOT NULL,
  	isbn varchar(100) NOT NULL,
@@ -14,4 +14,6 @@ CREATE TABLE book
  	last_available_date varchar(100) DEFAULT NULL,
  	wtUId bigint NOT NULL,
  	PRIMARY KEY (id)
-);
+);*/
+
+
