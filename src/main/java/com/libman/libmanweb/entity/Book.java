@@ -5,6 +5,10 @@ import javax.persistence.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+/**
+ * @author manish
+ *
+ */
 @Entity
 @Table(name = "BOOK")
 public class Book {
