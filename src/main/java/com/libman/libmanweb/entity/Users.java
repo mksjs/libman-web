@@ -30,7 +30,7 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "ID", length = 8, unique = true, nullable = false)
-    private Integer id;
+    private Long id;
     @Column(name = "UID", nullable = false)
     private Long uid;
     @Column(name = "USEREMAIL", nullable = false, unique = true)
@@ -77,8 +77,24 @@ public class Users {
         this.role = role;
         this.enabled = enabled;
     }
+    
+    /**
+    *
+    * @return THe Library user books list
+    */
+   public List<LibUserBook> getAddUpdateList() {
+       return addUpdateList;
+   }
 
-	public Integer getId() {
+   /**
+    *
+    * @param addUpdateList
+    */
+   public void setAddUpdateList(List<LibUserBook> addUpdateList) {
+       this.addUpdateList = addUpdateList;
+   }
+
+	public Long getId() {
 		return id;
 	}
 
@@ -102,7 +118,7 @@ public class Users {
 		return enabled;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -150,7 +166,6 @@ public class Users {
                 "id=" + id +
                 ", uid=" + uid +
                 ", useremail='" + useremail + '\'' +
-                ", password='" + password + '\'' +
                 ", role='" + role + '\'' +
                 ", enabled=" + enabled +
                 '}';

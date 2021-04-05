@@ -9,6 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @author manish
  *
  */
+/**
+ * @author manish
+ *
+ */
 @Entity
 @Table(name = "BOOK")
 public class Book {
@@ -31,7 +35,7 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "BOOKID", length = 8, unique = true, nullable = false)
-    private Integer bookId;
+    private Long bookId;
 
     @Column(name = "ISBN", nullable = false, unique = true)
     private String isbn;
@@ -57,7 +61,7 @@ public class Book {
     private String location;
 
     @Column(name = "NUM_OF_COPIES")
-    private int num_of_copies;
+    private Long num_of_copies;
 
     @Column(name = "CURRENT_STATUS")
     private String current_status;
@@ -72,7 +76,7 @@ public class Book {
     private String last_available_date;
 
     @Column(name = "WAITLISTED_USER")
-    private Integer wtUId;
+    private Long wtUId;
 
     /**
      * The default constructor
@@ -94,7 +98,7 @@ public class Book {
      * @param keywords
      * @param image
      */
-    public Book(String isbn, String author, String title, String callnumber, String publisher, String year_of_publication, String location, int num_of_copies, String current_status, String keywords, byte[] image) {
+    public Book(String isbn, String author, String title, String callnumber, String publisher, String year_of_publication, String location, Long num_of_copies, String current_status, String keywords, byte[] image) {
         this.isbn = isbn;
         this.author = author;
         this.title = title;
@@ -106,7 +110,7 @@ public class Book {
         this.current_status = current_status;
         this.keywords = keywords;
         this.image = image;
-        this.wtUId = -1;
+        this.wtUId = -1l;
         this.last_available_date = null;
 
     }
@@ -177,7 +181,7 @@ public class Book {
 	/**
 	 * @return
 	 */
-	public Integer getBookId() {
+	public Long getBookId() {
 		return bookId;
 	}
 
@@ -241,7 +245,7 @@ public class Book {
 	/**
 	 * @return
 	 */
-	public int getNum_of_copies() {
+	public Long getNum_of_copies() {
 		return num_of_copies;
 	}
 
@@ -272,7 +276,7 @@ public class Book {
 	}
 
 
-	public Integer getWtUId() {
+	public Long getWtUId() {
 		return wtUId;
 	}
 
@@ -287,7 +291,7 @@ public class Book {
 	}
 
 
-	public void setBookId(Integer bookId) {
+	public void setBookId(Long bookId) {
 		this.bookId = bookId;
 	}
 
@@ -327,7 +331,7 @@ public class Book {
 	}
 
 
-	public void setNum_of_copies(int num_of_copies) {
+	public void setNum_of_copies(Long num_of_copies) {
 		this.num_of_copies = num_of_copies;
 	}
 
@@ -352,7 +356,7 @@ public class Book {
 	}
 
 
-	public void setWtUId(Integer wtUId) {
+	public void setWtUId(Long wtUId) {
 		this.wtUId = wtUId;
 	}
 }

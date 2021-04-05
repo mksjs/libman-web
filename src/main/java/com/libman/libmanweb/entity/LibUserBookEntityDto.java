@@ -14,7 +14,7 @@ public class LibUserBookEntityDto {
 	private String isbn;
 	private String userEmail;
 	private String action;
-	private int noOfCopies;
+	private Long noOfCopies;
 	private String status;
     
 	public Long getBookId() {
@@ -44,7 +44,7 @@ public class LibUserBookEntityDto {
 	public String getAction() {
 		return action;
 	}
-	public int getNoOfCopies() {
+	public Long getNoOfCopies() {
 		return noOfCopies;
 	}
 	public String getStatus() {
@@ -77,7 +77,7 @@ public class LibUserBookEntityDto {
 	public void setAction(String action) {
 		this.action = action;
 	}
-	public void setNoOfCopies(int noOfCopies) {
+	public void setNoOfCopies(Long noOfCopies) {
 		this.noOfCopies = noOfCopies;
 	}
 	public void setStatus(String status) {

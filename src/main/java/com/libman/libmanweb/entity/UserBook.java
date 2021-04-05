@@ -31,14 +31,14 @@ public class UserBook {
 	private String checkout_date;
 	// 0 or 1 or 2
 	@Column(name = "RENEW_FLAG")
-	private Integer renew_flag;
+	private Long renew_flag;
 	@Column(name = "FINE")
-	private Integer fine;
+	private Long fine;
 
 	public UserBook() {
 	}
 
-	public UserBook(Book book, Users user, LocalDateTime checkout_date, Integer renew_flag) {
+	public UserBook(Book book, Users user, LocalDateTime checkout_date, Long renew_flag) {
 		// primary key
 		this.id = new UserBookId(book.getBookId(), user.getId());
 		this.book = book;
@@ -64,11 +64,11 @@ public class UserBook {
 		return checkout_date;
 	}
 
-	public Integer getRenew_flag() {
+	public Long getRenew_flag() {
 		return renew_flag;
 	}
 
-	public Integer getFine() {
+	public Long getFine() {
 		return fine;
 	}
 
@@ -88,11 +88,11 @@ public class UserBook {
 		this.checkout_date = checkout_date;
 	}
 
-	public void setRenew_flag(Integer renew_flag) {
+	public void setRenew_flag(Long renew_flag) {
 		this.renew_flag = renew_flag;
 	}
 
-	public void setFine(Integer fine) {
+	public void setFine(Long fine) {
 		this.fine = fine;
 	}
 
@@ -109,7 +109,7 @@ public class UserBook {
 
         Calendar cal = new GregorianCalendar();
         cal.setTime(duedate);
-        cal.add(Calendar.DATE, 30);
+        cal.add(Calendar.DATE, 7);
 
         String dueDate = dtf.format(cal.getTime());
         // System.out.println("String new due date " + dueDate);
@@ -134,12 +134,12 @@ public class UserBook {
         long hours = (currDate.getTime() - checkDate.getTime()) / (60 * 60 * 1000);
         System.out.println("setCalculateFine: long hours: " + hours);
         if (hours <= 0) {
-            this.fine = 0;
+            this.fine = 0l;
             return;
         }
         Integer intHours = (int) (long) hours;
         System.out.println("setCalculateFine: intHours: " + intHours);
-        this.fine = ((intHours / 24) + 1);
+        this.fine = (long) ((intHours / 24) + 1);
     }
 
 }

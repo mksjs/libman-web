@@ -13,10 +13,10 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class UserBookId implements Serializable{
 	@Column(name = "book")
-    protected Integer bookId;
+    protected Long bookId;
 
     @Column(name = "users")
-    protected Integer userId;
+    protected Long userId;
 
     /**
      * The default constructor
@@ -29,7 +29,7 @@ public class UserBookId implements Serializable{
      * @param bookId
      * @param userId
      */
-    public UserBookId(Integer bookId, Integer userId) {
+    public UserBookId(Long bookId, Long userId) {
         this.bookId = bookId;
         this.userId = userId;
     }

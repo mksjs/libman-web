@@ -6,10 +6,13 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @author manish
  *
  */
+@Component("Clock")
 public class Clock {
 	Calendar calendar = new GregorianCalendar();
 

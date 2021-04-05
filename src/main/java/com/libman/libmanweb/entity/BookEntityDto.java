@@ -5,19 +5,19 @@ package com.libman.libmanweb.entity;
  *
  */
 public class BookEntityDto {
-	private int bookId;
+	private Long bookId;
     private String author;
     private String callNumber;
     private String currentStatus;
     private String isbn;
     private String keywords;
     private String location;
-    private int numberOfCopies;
+    private Long numberOfCopies;
     private String publisher;
     private String title;
     private String yearOfPublication;
     
-	public int getBookId() {
+	public Long getBookId() {
 		return bookId;
 	}
 	public String getAuthor() {
@@ -38,7 +38,7 @@ public class BookEntityDto {
 	public String getLocation() {
 		return location;
 	}
-	public int getNumberOfCopies() {
+	public Long getNumberOfCopies() {
 		return numberOfCopies;
 	}
 	public String getPublisher() {
@@ -50,7 +50,7 @@ public class BookEntityDto {
 	public String getYearOfPublication() {
 		return yearOfPublication;
 	}
-	public void setBookId(int bookId) {
+	public void setBookId(Long bookId) {
 		this.bookId = bookId;
 	}
 	public void setAuthor(String author) {
@@ -71,7 +71,7 @@ public class BookEntityDto {
 	public void setLocation(String location) {
 		this.location = location;
 	}
-	public void setNumberOfCopies(int numberOfCopies) {
+	public void setNumberOfCopies(Long numberOfCopies) {
 		this.numberOfCopies = numberOfCopies;
 	}
 	public void setPublisher(String publisher) {
