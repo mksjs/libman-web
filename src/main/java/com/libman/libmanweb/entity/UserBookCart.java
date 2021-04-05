@@ -12,58 +12,58 @@ public class UserBookCart {
 	@Id
     @GeneratedValue
     @Column(name = "ID")
-    private int id;
+    private Long id;
 
     
 
 	@Column(name = "USERID")
-    private int userId;
+    private Long userId;
 
 	@Column(name = "BOOKID")
-    private int bookId;
+    private Long bookId;
 
     @Column(name = "RETURNTYPE")
-    private int returnType;
+    private Long returnType;
     
     public UserBookCart() {
 		
     }
     
-    public UserBookCart(int userId, int bookId, int returnType) {
-		this.userId = userId;
-		this.bookId = bookId;
-		this.returnType = returnType;
+    public UserBookCart(Long userId2, Long bookId2, long l) {
+		this.userId = userId2;
+		this.bookId = bookId2;
+		this.returnType = l;
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public int getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public int getBookId() {
+	public Long getBookId() {
 		return bookId;
 	}
 
-	public int getReturnType() {
+	public Long getReturnType() {
 		return returnType;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public void setUserId(int userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
-	public void setBookId(int bookId) {
+	public void setBookId(Long bookId) {
 		this.bookId = bookId;
 	}
 
-	public void setReturnType(int returnType) {
+	public void setReturnType(Long returnType) {
 		this.returnType = returnType;
 	}
 }

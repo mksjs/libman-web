@@ -87,10 +87,10 @@ public class LibUserBook {
     public static class LibUserBookId implements Serializable {
 
         @Column(name = "book")
-        protected Integer bookId;
+        protected Long bookId;
 
         @Column(name = "users")
-        protected Integer userId;
+        protected Long userId;
 
         public LibUserBookId() {
 
@@ -100,7 +100,7 @@ public class LibUserBook {
          * @param bookId
          * @param userId
          */
-        public LibUserBookId(Integer bookId, Integer userId) {
+        public LibUserBookId(Long bookId, Long userId) {
             System.out.println("book id is ----" + bookId);
             this.bookId = bookId;
             this.userId = userId;
